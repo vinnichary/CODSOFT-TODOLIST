@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.todo-home {
+  width: 100%;
+  min-height: 100vh;
+  background: #3da2c3 center/cover no-repeat;
+  padding: 10px;
+}
+
+.todo-box {
+  width: 100%;
+  max-width: 540px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-box h2 {
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.todo-box h2 img {
+  width: 60px;
+  margin-left: 10px;
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 14px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(image/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(image/checked.png);
+}
+
+ul li deleteBtn {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 90px;
+  height: 50px;
+  padding: 5px 10px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+ul li deleteBtn:hover {
+  background: #edeef0;
+}
